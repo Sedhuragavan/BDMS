@@ -1,0 +1,51 @@
+header {
+  height: 80px;
+  background-color: #fbfbfb;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 5%;
+}
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-item a {
+  padding: 30px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 16px;
+  color: #1b1b1b;
+  transition: .4s ease-in-out;
+}
+
+
+
+.drop {
+  list-style-type: none;
+  display: none;
+}
+
+.navbar li:nth-child(2):hover .drop {
+  display: block;
+}
+
+.nav-item a:hover {
+  color: rgb(220, 120, 120);
+}
+
+.active span {
+  color: rgb(252, 4, 4);
+}
