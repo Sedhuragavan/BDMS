@@ -27,11 +27,12 @@ export class DonorComponent implements OnInit {
   }
 
   logout() {
+    confirm('Are you sure to logout');
 
     this.registerformService.loggedInUser = null;
-    
-    sessionStorage.removeItem('loggedInUser');
 
+    sessionStorage.removeItem('loggedInUser');
+    alert('You are logout succussfully');
     // Navigate back to the login page
     this.router.navigate(['/home']);
   }
