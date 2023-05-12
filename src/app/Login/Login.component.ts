@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   });
 
   submitForm() {
-    this.http.get<any>('http://localhost:3000/registeredusers').subscribe((users) => {
+    this.registerformService.loginUser().subscribe((users) => {
         const user = users.find((u: any) => u.email === this.loginForm.value.email && u.pass === this.loginForm.value.pass
         );
         if (user) {

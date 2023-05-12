@@ -11,15 +11,24 @@ export class RegisterformService {
 
   constructor(private http: HttpClient) { }
 
-
-  // getUserInfo(): Observable<any> {
-  //   return this.http.get<any>('http://localhost:3000/registeredusers');
-  // }
-
     addUserInformation(body:any){
       return this.http.post("http://localhost:3000/registeredusers", body);
     }
+  
+    loginUser(): Observable<any>{
+      return this.http.get("http://localhost:3000/registeredusers")
+    }
 
+    getDonationHistory(loggedInUser: any) {
+      
+      return this.http.get("http://localhost:3000/registeredusers");
+    }
+
+    addDonationHistory(donations:any, id:any): Observable<any> {
+      
+      return this.http.put('http://localhost:3000/registeredusers/'+id ,donations)
+      //  return this.store.patch(this.url + '/' + id, data);
+    }
 
 
 }
