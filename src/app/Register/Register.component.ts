@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
     gender:['default',[Validators.required]],
     email:[,[Validators.required, Validators.pattern]],
     phno:[,[Validators.required]],
-    city:['default',[Validators.required]],
+    city:['',[Validators.required]],
     pass:[,[Validators.required]],
     cpass:[,[Validators.required]],
    

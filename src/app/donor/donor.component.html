@@ -10,81 +10,57 @@
 
 
 
-
 <div class="body">
   <div class="sidebar">
+
     <ul>
       <li>
-        <p (click)="toggleDonationHistory()">Donation History</p>
-
+        <a routerLink="donationhistory" routerLinkActive="active">
+          <span class="title-2">Donation History</span>
+        </a>
       </li>
       <li>
-        <p (click)="toggleUpdateProfile()">Update Profile</p>
-
+        <a routerLink="menuedit" routerLinkActive="active">
+          <span class="title-2">Update Profile</span>
+        </a>
       </li>
       <li>
-        <p (click)="toggleChangePassword()">Change Password</p>
-
+        <a routerLink="customerDetails" routerLinkActive="active">
+          <span class="title-2">Set Status</span>
+        </a>
       </li>
       <li>
-        <p (click)="toggleSetStatus()">Set Status</p>
-
+        <a routerLink="queries" routerLinkActive="active">
+          <span class="title-2">Delete Account</span>
+        </a>
       </li>
-      <li>
-        <p (click)="toggleDeleteAccount()">Delete Account</p>
 
-      </li>
     </ul>
   </div>
-  <div  *ngIf="showDonationHistory"> <!-- Show content if variable is true -->
-    Donation History content goes here
-    <h3>Donation History</h3>
-  <ul>
-    <li *ngFor="let donation of donationHistory">
-      <p>Date: {{ donation.date }}</p>
-      <p>Place: {{ donation.place }}</p>
-      <p>Message: {{ donation.message }}</p>
-    </li>
-  </ul>
-  <form autocomplete="off" (ngSubmit)="addDonationHistory()">
-    <label for="donationDate">Date:</label>
-    <input type="date" id="donationDate" [(ngModel)]="donationDate" name="donationDate" required>
 
-    <label for="donationPlace">Place:</label>
-    <input type="text" id="donationPlace" [(ngModel)]="donationPlace" name="donationPlace" required>
 
-    <label for="donationMessage">Message:</label>
-    <textarea id="donationMessage" [(ngModel)]="donationMessage" name="donationMessage" rows="4" cols="50" required></textarea>
 
-    <button type="submit">Add Donation History</button>
-  </form>
-  </div>
-  <div *ngIf="showUpdateProfile"> <!-- Show content if variable is true -->
-    Update Profile content goes here
-  </div>
-  <div *ngIf="showChangePassword"> <!-- Show content if variable is true -->
-    Change Password content goes here
-  </div>
-  <div *ngIf="showSetStatus"> <!-- Show content if variable is true -->
-    Set Status content goes here
-  </div>
-  <div *ngIf="showDeleteAccount"> <!-- Show content if variable is true -->
-    Delete Account content goes here
-  </div>
+  <div class="profile">
 
+    <ul>
+      <li><strong>Name:</strong> {{ loggedInUser.uname }}</li>
+      <li><strong>Age:</strong> {{ loggedInUser.age }}</li>
+      <li><strong>Blood Group:</strong> {{ loggedInUser.bgroup }}</li>
+      <li><strong>Weight:</strong> {{ loggedInUser.weight }}</li>
+      <li><strong>Gender:</strong> {{ loggedInUser.gender }}</li>
+      <li><strong>Email:</strong> {{ loggedInUser.email }}</li>
+      <li><strong>Phone Number:</strong> {{ loggedInUser.phno }}</li>
+      <li><strong>City:</strong> {{ loggedInUser.city }}</li>
+      {{loggedInUser.donationHistory}}
+      <div class="" *ngfor="let donation of loggedInUser.donationHistory">
+        <li>{{donation.donationDate}}</li>
+        <li>{{donation.donationPlace}}</li>
+        <li>{{donation.donationMessage}}</li>
+      </div>
+    </ul>
+  </div>
 </div>
 
-<div class="profile">
-   
-  <ul>
-    <li><strong>Name:</strong> {{ loggedInUser.uname }}</li>
-    <li><strong>Age:</strong> {{ loggedInUser.age }}</li>
-    <li><strong>Blood Group:</strong> {{ loggedInUser.bgroup }}</li>
-    <li><strong>Weight:</strong> {{ loggedInUser.weight }}</li>
-    <li><strong>Gender:</strong> {{ loggedInUser.gender }}</li>
-    <li><strong>Email:</strong> {{ loggedInUser.email }}</li>
-    <li><strong>Phone Number:</strong> {{ loggedInUser.phno }}</li>
-    <li><strong>City:</strong> {{ loggedInUser.city }}</li>
-    <li>{{loggedInUser.donationHistory}}</li>
-  </ul>
+<div class="child">
+  <!-- <router-outlet></router-outlet> -->
 </div>

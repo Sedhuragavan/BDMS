@@ -18,9 +18,14 @@ import { RequestbloodComponent } from './requestblood/requestblood.component';
 import { AboutusComponent } from './Aboutus/Aboutus.component';
 import { DonorComponent } from './donor/donor.component';
 import { FaqComponent } from './faq/faq.component';
+import { DonorhistoryComponent } from './donorhistory/donorhistory.component';
+import { DonorUpdateprofileComponent } from './donor-updateprofile/donor-updateprofile.component';
+import { DonorDonationhistoryComponent } from './donor-donationhistory/donor-donationhistory.component';
+import { DonorSetstatusComponent } from './donor-setstatus/donor-setstatus.component';
+import { DonorDeleteaccountComponent } from './donor-deleteaccount/donor-deleteaccount.component';
 
 @NgModule({
-  declarations: [						
+  declarations: [											
     AppComponent,
     HomeComponent,
       HeaderComponent,
@@ -33,7 +38,12 @@ import { FaqComponent } from './faq/faq.component';
       RequestbloodComponent,
       AboutusComponent,
       DonorComponent,
-      FaqComponent
+      FaqComponent,
+      DonorhistoryComponent,
+      DonorUpdateprofileComponent,
+      DonorDonationhistoryComponent,
+      DonorSetstatusComponent,
+      DonorDeleteaccountComponent
    ],
   imports: [
     BrowserModule,
