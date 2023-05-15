@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './Login/Login.component';
 import { RegisterComponent } from './Register/Register.component';
 import { RequestbloodComponent } from './requestblood/requestblood.component';
+import { DonorDonationhistoryComponent } from './donorDonationhistory/donorDonationhistory.component';
+import { DonorUpdateprofileComponent } from './donorUpdateprofile/donorUpdateprofile.component';
+import { DonorSetstatusComponent } from './donorSetstatus/donorSetstatus.component';
+import { DonorDeleteaccountComponent } from './donorDeleteaccount/donorDeleteaccount.component';
 
 const routes: Routes = [
   {
@@ -45,10 +49,34 @@ const routes: Routes = [
   },
   {
     path:"donor",
-    component:DonorComponent
+    component:DonorComponent,
+    children:[
+      {
+      path:'donationhistory',
+      component:DonorDonationhistoryComponent
+    },
+    {
+      path:'updateprofile',
+      component:DonorUpdateprofileComponent
+    },
+    {
+      path:'setstatus',
+      component:DonorSetstatusComponent
+    },
+    {
+      path:'deleteaccount',
+      component:DonorDeleteaccountComponent
+    },
+    {
+      path:"",
+      component:DonorSetstatusComponent
+
+    }
+  
+  ]
   },
   {
-    path:"",
+    path:"**",
     component:HomeComponent
   }
 ];

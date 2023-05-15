@@ -11,46 +11,46 @@ import { RegisterComponent } from './Register/Register.component';
 import { ForgotComponent } from './Forgot/Forgot.component';
 import { ContactusComponent } from './Contactus/Contactus.component';
 import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule} from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './Footer/Footer.component';
 import { BloodfactsComponent } from './bloodfacts/bloodfacts.component';
 import { RequestbloodComponent } from './requestblood/requestblood.component';
 import { AboutusComponent } from './Aboutus/Aboutus.component';
 import { DonorComponent } from './donor/donor.component';
 import { FaqComponent } from './faq/faq.component';
-import { DonorhistoryComponent } from './donorhistory/donorhistory.component';
-import { DonorUpdateprofileComponent } from './donor-updateprofile/donor-updateprofile.component';
-import { DonorDonationhistoryComponent } from './donor-donationhistory/donor-donationhistory.component';
-import { DonorSetstatusComponent } from './donor-setstatus/donor-setstatus.component';
-import { DonorDeleteaccountComponent } from './donor-deleteaccount/donor-deleteaccount.component';
+import { DonorDonationhistoryComponent } from './donorDonationhistory/donorDonationhistory.component';
+import { DonorUpdateprofileComponent } from './donorUpdateprofile/donorUpdateprofile.component';
+import { DonorSetstatusComponent } from './donorSetstatus/donorSetstatus.component';
+import { DonorDeleteaccountComponent } from './donorDeleteaccount/donorDeleteaccount.component';
 
 @NgModule({
-  declarations: [											
+  declarations: [
     AppComponent,
     HomeComponent,
-      HeaderComponent,
-      LoginComponent,
-      RegisterComponent,
-      ForgotComponent,
-      ContactusComponent,
-      FooterComponent,
-      BloodfactsComponent,
-      RequestbloodComponent,
-      AboutusComponent,
-      DonorComponent,
-      FaqComponent,
-      DonorhistoryComponent,
-      DonorUpdateprofileComponent,
-      DonorDonationhistoryComponent,
-      DonorSetstatusComponent,
-      DonorDeleteaccountComponent
-   ],
+    HeaderComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgotComponent,
+    ContactusComponent,
+    FooterComponent,
+    BloodfactsComponent,
+    RequestbloodComponent,
+    AboutusComponent,
+    DonorComponent,
+    FaqComponent,
+    DonorDonationhistoryComponent,
+    DonorUpdateprofileComponent,
+    DonorSetstatusComponent,
+    DonorDeleteaccountComponent,
+  ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,ReactiveFormsModule,
-    HttpClientModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

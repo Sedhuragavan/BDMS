@@ -52,12 +52,14 @@
 
 .child{
     position: absolute;
-    left: 270px;
-    width: 80%;
+    left: 25%;
+    width: 70%;
+    height:80vh;
+    margin-top: 20px;
+    background-color: #e4e4e4;
+    border-radius: 12px;
 }
-ul li{
-    list-style-type: none;
-}
+
 
 .title-2{
 display: inline-block;

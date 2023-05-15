@@ -221,8 +221,6 @@
             <option value="Rameswaram"> Rameswaram </option>
             <option value="Rasipuram"> Rasipuram </option>
             <option value="Salem"> Salem </option>
-            <option value="Salem South"> Salem South </option>
-            <option value="Salem West"> Salem West </option>
             <option value="Sankarankovil"> Sankarankovil </option>
             <option value="Sankarapuram"> Sankarapuram </option>
             <option value="Sankari"> Sankari </option>
@@ -288,7 +286,6 @@
             <option value="Tirupathur"> Tirupathur </option>
             <option value="Tiruporur"> Tiruporur </option>
             <option value="Tiruppur "> Tiruppur </option>
-            <option value="Tiruppur "> Tiruppur </option>
             <option value="Tiruthani"> Tiruthani </option>
             <option value="Tiruvadanai"> Tiruvadanai </option>
             <option value="Tiruverumbur"> Tiruverumbur </option>
@@ -330,7 +327,7 @@
             <option value="Walajah"> Walajah </option>
             <option value="Watrap"> Watrap </option>
             <option value="Yercaud"> Yercaud </option>
-
+      
           </datalist>
   </div>
 
@@ -344,9 +341,9 @@
       <th>Name</th>
       <th>City</th>
       <th>Blood Group</th>
-      <th>Phonenumber</th>
       <th>Status</th>
       <th>Report</th>
+      <th>details</th>
     </tr>
   </thead>
   <tbody>
@@ -354,9 +351,11 @@
       <td>{{ item.uname }}</td>
       <td>{{ item.city }}</td>
       <td>{{ item.bgroup }}</td>
-      <td>{{ item.phno }}</td>
-      <td>Available</td>
+      <!-- <td *ngIf="item.setStatus=='Available'">{{ item.phno }}</td> -->
+      <td>{{item.setStatus}}</td>
       <td>Report</td>
+      <td><button (click)="showphno(item)" [disabled]="item.setStatus=='NotAvailable'
+        ">shownumber </button></td>
     </tr>
   </tbody>
 </table>
@@ -367,4 +366,14 @@
 <div>
   <br><br><br><br><br><br><br><br>
 </div>
+
+
+<div *ngIf="phone" class="details">
+  name: {{selectedname.uname}}<br>
+  phonenumber: {{selectedname.phno}}
+
+</div>
+
+
+
 <app-Footer></app-Footer>

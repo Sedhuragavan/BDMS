@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormControl,FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { RegisterformService } from '../registerform.service';
 import { Router } from '@angular/router';
 
@@ -11,15 +16,12 @@ import { Router } from '@angular/router';
 export class DonorComponent implements OnInit {
   donorId: any;
   loggedInUser: any;
-  donationHistory: any;
-  donationDate: any;
-  donationPlace: any;
-  donationMessage: any;
+  visible: boolean = true;
 
   constructor(
     private registerformService: RegisterformService,
     private router: Router,
-    private formbuilder:FormBuilder
+    private formbuilder: FormBuilder
   ) {}
 
   ngOnInit(): void {
@@ -33,8 +35,6 @@ export class DonorComponent implements OnInit {
       this.router.navigate(['/login']);
     }
     console.log(this.loggedInUser.id);
-  
-   
   }
 
   logout() {

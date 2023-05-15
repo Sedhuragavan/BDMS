@@ -10,7 +10,9 @@ export class RequestbloodComponent implements OnInit {
   data: any = '';
   city: any = '';
   bgroup: any = '';
+  phone:boolean =false;
   error:boolean=false;
+  selectedname:any;
 
   constructor(private fetchdata: FetchDataService) {}
 
@@ -33,5 +35,12 @@ export class RequestbloodComponent implements OnInit {
         this.error = true;
       }
     });
+  }
+
+  showphno(item:any){
+alert(item.uname);
+this.selectedname=item;
+    this.phone=true;
+
   }
 }

@@ -1,33 +1,33 @@
 {
-  "admin": [
-    {}
-  ],
+  "admin": [{}],
   "registeredusers": [
     {
       "uname": "Sedhuragavan L",
-      "age": 21,
-      "bgroup": "A+",
-      "weight": 85,
+      "age": 22,
+      "bgroup": "AB-",
+      "weight": 80,
       "gender": "male",
       "email": "sedhu@gmail.com",
-      "phno": "6381957262",
+      "phno": "9454747455",
       "city": "Anthiyur",
       "pass": "Sedhu@123",
       "cpass": "Sedhu@123",
-      "id": 1
+      "id": 1,
+      "setStatus": "Available"
     },
     {
       "uname": "Manikandan S",
       "age": 21,
-      "bgroup": "A+",
-      "weight": 70,
+      "bgroup": "B+",
+      "weight": 55,
       "gender": "male",
       "email": "mani@gmail.com",
       "phno": "7878788788",
       "city": "Salem",
       "pass": "Manimama@1",
       "cpass": "Manimama@1",
-      "id": 2
+      "id": 2,
+      "setStatus": "Available"
     },
     {
       "uname": "Kishore S",
@@ -40,7 +40,8 @@
       "city": "Salem",
       "pass": "Kishore@123",
       "cpass": "Kishore@123",
-      "id": 3
+      "id": 3,
+      "setStatus": "Available"
     },
     {
       "uname": "Gautam K K",
@@ -53,7 +54,8 @@
       "city": "Modakurichi",
       "pass": "Gautam@45",
       "cpass": "Gautam@45",
-      "id": 4
+      "id": 4,
+      "setStatus": "Available"
     },
     {
       "uname": "Vigneshwaran D",
@@ -66,7 +68,8 @@
       "city": "Rasipuram",
       "pass": "Vignesh@123",
       "cpass": "Vignesh@123",
-      "id": 5
+      "id": 5,
+      "setStatus": "Available"
     },
     {
       "uname": "Hari Gokul S",
@@ -79,7 +82,8 @@
       "city": "Salem",
       "pass": "Revi@99",
       "cpass": "Revi@99",
-      "id": 6
+      "id": 6,
+      "setStatus": "NotAvailable"
     },
     {
       "uname": "Mythili T",
@@ -92,7 +96,8 @@
       "city": "Edapadi",
       "pass": "Mythili@1210",
       "cpass": "Mythili@1210",
-      "id": 7
+      "id": 7,
+      "setStatus": "Available"
     },
     {
       "uname": "Sree Ganesh",
@@ -105,7 +110,8 @@
       "city": "Salem",
       "pass": "Sreeganesh@2001",
       "cpass": "Sreeganesh@2001",
-      "id": 8
+      "id": 8,
+      "setStatus": "NotAvailable"
     },
     {
       "uname": "santhosh",
@@ -118,7 +124,8 @@
       "city": "Salem",
       "pass": "Santy007@",
       "cpass": "Santy007@",
-      "id": 9
+      "id": 9,
+      "setStatus": "NotAvailable"
     },
     {
       "uname": "Mohana raj K",
@@ -131,7 +138,8 @@
       "city": "Mettur",
       "pass": "Mohan@5421#",
       "cpass": "Mohan@5421#",
-      "id": 10
+      "id": 10,
+      "setStatus": "Available"
     },
     {
       "uname": "Venkatesh J",
@@ -144,7 +152,8 @@
       "city": "Kumarapalayam",
       "pass": "Venkat@123",
       "cpass": "Venkat@123",
-      "id": 11
+      "id": 11,
+      "setStatus": "Available"
     },
     {
       "uname": "Saurav",
@@ -157,47 +166,36 @@
       "city": "Tiruchengode",
       "pass": "Saurav@123",
       "cpass": "Saurav@123",
-      "id": 12
+      "id": 12,
+      "setStatus": "Available"
     },
     {
-      "uname": "bnfgh",
-      "age": 25,
-      "bgroup": "A+",
-      "weight": 55,
-      "gender": "default",
-      "email": "kavin@gmail.com",
-      "phno": "8978787474",
-      "city": "Sankari",
-      "pass": "Mkavin@485",
-      "cpass": "Mkavin@485",
+      "uname": "Vijay",
+      "age": 26,
+      "bgroup": "O-",
+      "weight": 66,
+      "gender": "male",
+      "email": "vijay123@gmail.com",
+      "phno": "7417418520",
+      "city": "Chengalpattu",
+      "pass": "Vijay123@",
+      "cpass": "Vijay123@",
       "id": 13,
-      "donationHistory": [
-        {
-          "donationDate": "2023-05-12",
-          "donationPlace": "bfdbdb",
-          "donationMessage": "bdfbfdbsdfbdfsbsdfb"
-        },
-        {
-          "donationDate": "2023-05-01",
-          "donationPlace": "salem",
-          "donationMessage": "I donated one unit of blood to Dharan hospital"
-        }
-      ],
-      "donationDate": "2023-05-08",
-      "donationPlace": "chennai",
-      "donationMessage": "donated blood in Kaveri hospital"
+      "setStatus": "Available"
     },
     {
-      "donationDate": "2023-05-12",
-      "donationPlace": "bfdbdb",
-      "donationMessage": "bdfbfdbsdfbdfsbsdfb",
-      "id": 14
-    },
-    {
-      "id": 15,
-      "donationDate": "2023-05-01",
-      "donationPlace": "salem",
-      "donationMessage": "I donated one unit of blood to Dharan hospital"
+      "uname": "Ajith",
+      "age": 30,
+      "bgroup": "B+",
+      "weight": 95,
+      "gender": "male",
+      "email": "ajith@yahoo.com",
+      "phno": "8520852012",
+      "city": "Senthamangalam",
+      "pass": "Thala!@1",
+      "cpass": "Thala!@1",
+      "id": 14,
+      "setStatus": "NotAvailable"
     }
   ]
 }

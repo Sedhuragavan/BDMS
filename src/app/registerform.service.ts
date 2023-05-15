@@ -23,16 +23,17 @@ export class RegisterformService {
       return this.http.get("http://localhost:3000/registeredusers")
     }
 
-    getDonationHistory(loggedInUser: any) {
-      
-      return this.http.get("http://localhost:3000/registeredusers");
+    getUserById(id: number): Observable<any>{
+      return this.http.get("http://localhost:3000/registeredusers/" + id);
     }
 
-    addDonationHistory(donations:any, id:any): Observable<any> {
-      
-      return this.http.patch('http://localhost:3000/registeredusers/'+id ,donations)
-      //  return this.store.patch(this.url + '/' + id, data);
+    deleteUser(userId: string): Observable<any> {
+      return this.http.delete(`http://localhost:3000/registeredusers/${userId}`);
     }
+
+  
+
+  
 
 
 }
