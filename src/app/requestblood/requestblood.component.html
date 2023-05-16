@@ -351,10 +351,9 @@
       <td>{{ item.uname }}</td>
       <td>{{ item.city }}</td>
       <td>{{ item.bgroup }}</td>
-      <!-- <td *ngIf="item.setStatus=='Available'">{{ item.phno }}</td> -->
       <td>{{item.setStatus}}</td>
       <td>Report</td>
-      <td><button (click)="showphno(item)" [disabled]="item.setStatus=='NotAvailable'
+      <td><button (click)="showphno(item)" [disabled]="item.setStatus=='UnAvailable'
         ">shownumber </button></td>
     </tr>
   </tbody>
@@ -368,7 +367,26 @@
 </div>
 
 
-<div *ngIf="phone" class="details">
+<div *ngIf="form" class="UserDetails" style=" padding:50px 50px 50px 50px" >
+  <h2 style="text-align: center;">Enter Your Details</h2><br>
+<form action="" [formGroup]="userForm" style="margin-left:40%;">
+  <div class="getName">
+    <label for="">Your Name:</label>
+    <input type="text" formControlName="userName"/>
+  </div><br>
+  <div class="'getMobile'" >
+    <label for="">Your Mobile Number:</label>
+    <input type="text" formControlName="mobileNumber"/>
+  </div><br>
+  <div class="getEmail " >
+    <label for="">Your Email Id::</label>
+    <input type="text" formControlName="emailId"/>
+  </div><br>
+  <button style="margin-left: 10%;" (click)="getDonar()">Get Details</button>
+</form>
+</div>
+
+<div *ngIf="details" class="details">
   name: {{selectedname.uname}}<br>
   phonenumber: {{selectedname.phno}}
 

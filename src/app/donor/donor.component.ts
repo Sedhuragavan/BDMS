@@ -31,7 +31,7 @@ export class DonorComponent implements OnInit {
     } else if (this.registerformService.loggedInUser !== null) {
       this.loggedInUser = this.registerformService.loggedInUser;
     } else {
-      alert('You are Loggedout. Login to countinue');
+      alert('You are Loggedout or your account was deleted.');
       this.router.navigate(['/login']);
     }
     console.log(this.loggedInUser.id);
@@ -44,7 +44,6 @@ export class DonorComponent implements OnInit {
 
     sessionStorage.removeItem('loggedInUser');
     alert('You are logout succussfully');
-    // Navigate back to the login page
     this.router.navigate(['/home']);
   }
 }

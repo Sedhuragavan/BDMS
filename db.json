@@ -1,5 +1,7 @@
 {
-  "admin": [{}],
+  "admin": [
+    {}
+  ],
   "registeredusers": [
     {
       "uname": "Sedhuragavan L",
@@ -83,7 +85,7 @@
       "pass": "Revi@99",
       "cpass": "Revi@99",
       "id": 6,
-      "setStatus": "NotAvailable"
+      "setStatus": "UnAvailable"
     },
     {
       "uname": "Mythili T",
@@ -97,7 +99,7 @@
       "pass": "Mythili@1210",
       "cpass": "Mythili@1210",
       "id": 7,
-      "setStatus": "Available"
+      "setStatus": "UnAvailable"
     },
     {
       "uname": "Sree Ganesh",
@@ -111,7 +113,7 @@
       "pass": "Sreeganesh@2001",
       "cpass": "Sreeganesh@2001",
       "id": 8,
-      "setStatus": "NotAvailable"
+      "setStatus": "UnAvailable"
     },
     {
       "uname": "santhosh",
@@ -125,7 +127,7 @@
       "pass": "Santy007@",
       "cpass": "Santy007@",
       "id": 9,
-      "setStatus": "NotAvailable"
+      "setStatus": "UnAvailable"
     },
     {
       "uname": "Mohana raj K",
@@ -170,32 +172,72 @@
       "setStatus": "Available"
     },
     {
-      "uname": "Vijay",
-      "age": 26,
-      "bgroup": "O-",
-      "weight": 66,
-      "gender": "male",
-      "email": "vijay123@gmail.com",
-      "phno": "7417418520",
-      "city": "Chengalpattu",
-      "pass": "Vijay123@",
-      "cpass": "Vijay123@",
+      "uname": "Jane Doe",
+      "age": 30,
+      "bgroup": "A-",
+      "weight": 55,
+      "gender": "female",
+      "email": "janedoe@example.com",
+      "phno": "1234567890",
+      "city": "Edapadi",
+      "pass": "Test@123",
+      "cpass": "Test@123",
       "id": 13,
       "setStatus": "Available"
     },
     {
-      "uname": "Ajith",
-      "age": 30,
+      "uname": "John Smith",
+      "age": 45,
       "bgroup": "B+",
-      "weight": 95,
+      "weight": 80,
       "gender": "male",
-      "email": "ajith@yahoo.com",
-      "phno": "8520852012",
-      "city": "Senthamangalam",
-      "pass": "Thala!@1",
-      "cpass": "Thala!@1",
+      "email": "johnsmith@example.com",
+      "phno": "9876543210",
+      "city": "Salem",
+      "pass": "Password123",
+      "cpass": "Password123",
       "id": 14,
-      "setStatus": "NotAvailable"
+      "setStatus": "Available"
+    },
+    {
+      "uname": "Ashwin",
+      "age": 33,
+      "bgroup": "B+",
+      "weight": 70,
+      "gender": "male",
+      "email": "ashwin@gmail.com",
+      "phno": "8747474547",
+      "city": "Salem",
+      "pass": "Ash@123",
+      "cpass": "Ash@123",
+      "id": 15,
+      "setStatus": "Unavailable"
+    }
+  ],
+  "RequesterDonar": [
+    {
+      "userName": "Manikandan  S",
+      "mobileNumber": "9361798897",
+      "emailId": "manihibiscus@gmail.com",
+      "id": 1
+    },
+    {
+      "userName": "Manikandan  S",
+      "mobileNumber": "9652348215",
+      "emailId": "manihibiscus@gmail.com",
+      "id": 2
+    },
+    {
+      "userName": "Sedhuragavan",
+      "mobileNumber": "9842311410",
+      "emailId": "sedhu222@gmail.com",
+      "id": 3
+    },
+    {
+      "userName": "Sedhuragavan",
+      "mobileNumber": "9842311410",
+      "emailId": "sedhu222@gmail.com",
+      "id": 4
     }
   ]
 }

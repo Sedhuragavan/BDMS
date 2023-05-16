@@ -27,10 +27,14 @@ export class RegisterformService {
       return this.http.get("http://localhost:3000/registeredusers/" + id);
     }
 
-    deleteUser(userId: string): Observable<any> {
+    deleteUser(userId: number): Observable<any> {
       return this.http.delete(`http://localhost:3000/registeredusers/${userId}`);
     }
 
+
+    availability(data:any,id:number){
+      return this.http.patch('http://localhost:3000/registeredusers/'+id, data);
+    }
   
 
   
