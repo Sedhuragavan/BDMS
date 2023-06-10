@@ -1,14 +1,11 @@
-<p>
-  donorDeleteaccount works!
-</p>
-
 <h1>Delete Account</h1>
 <p>Are you sure you want to delete your account?</p>
 <button (click)="openDialog()">Delete Account</button>
 
-<!-- Dialog Box -->
+
 <div *ngIf="showDialog" class="dialog-overlay">
   <div class="dialog-content">
+    <button class="close-button" (click)="closeDialog()">X</button>
     <h2>Confirmation</h2>
     <p>Please confirm by typing "I want to delete my account":</p>
     <input type="text" [(ngModel)]="confirmationText">

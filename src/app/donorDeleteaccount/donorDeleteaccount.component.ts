@@ -33,6 +33,10 @@ export class DonorDeleteaccountComponent implements OnInit {
     this.showDialog = true;
   }
 
+  closeDialog() {
+    this.showDialog = false;
+  }
+
   confirmDelete() {
     confirm(
       'Your decision to delete your account means we will lose out on potential life-saving opportunities for those in need.'

@@ -17,6 +17,8 @@ export class RequestbloodComponent implements OnInit {
   selectedname: any;
   form: boolean = false;
   details: boolean = false;
+  empty:boolean= true;
+  showtable:boolean=false;
 
   constructor(private fetchdata: FetchDataService, private fb:FormBuilder, private http:HttpClient ) {}
 
@@ -31,9 +33,15 @@ export class RequestbloodComponent implements OnInit {
       } else if (data.length > 0) {
         this.data = data;
         this.error = false;
+        this.empty=false;
+        this.showtable=true;
+        this.details=false;
+        this.selectedname='';
+        this.userForm.reset();
       } else {
         this.data = '';
         this.error = true;
+        this.empty=false;
       }
     });
   }
@@ -56,8 +64,7 @@ export class RequestbloodComponent implements OnInit {
         .subscribe(() => {
           alert('Updated to DB');
         });
-      this.form = false;
-      this.details = true;
+      this.details =!this.details;
     }
   }
   donorDetails(item: any) {

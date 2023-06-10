@@ -22,9 +22,10 @@ import { DonorDonationhistoryComponent } from './donorDonationhistory/donorDonat
 import { DonorUpdateprofileComponent } from './donorUpdateprofile/donorUpdateprofile.component';
 import { DonorSetstatusComponent } from './donorSetstatus/donorSetstatus.component';
 import { DonorDeleteaccountComponent } from './donorDeleteaccount/donorDeleteaccount.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HomeComponent,
     HeaderComponent,
@@ -42,7 +43,8 @@ import { DonorDeleteaccountComponent } from './donorDeleteaccount/donorDeleteacc
     DonorUpdateprofileComponent,
     DonorSetstatusComponent,
     DonorDeleteaccountComponent,
-  ],
+      AdminComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

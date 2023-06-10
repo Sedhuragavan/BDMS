@@ -4,6 +4,11 @@
     grid-gap: 20px;
   }
   
+h2{
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+ } 
   .form-group label {
     margin-left: 20px;
     display: block;

@@ -47,7 +47,16 @@ button:hover {
     transition: .5s;
 } */
 
-table.customTable {
+.empty {
+    width: 80%;
+    /* height: 50vh; */
+}
+
+
+/* .viewheight{
+    min-height: 50vh; 
+} */
+.customTable {
     width: 100%;
     background-color: #FFFFFF;
     border-collapse: collapse;
@@ -66,17 +75,127 @@ table.customTable th {
     padding: 5px;
 }
 
+.table.customTable tr {
+    max-height: 30px;
+}
+
 table.customTable thead {
     background-color: #e3873b;
 }
 
-.errmsg{
+.errmsg {
     margin-top: 10px;
     color: #ff0000;
     text-align: center;
     padding: 30px;
     margin: auto;
     box-sizing: border-box;
-    border: 2px solid rgba(103, 99, 99, 0.628) ;
+    border: 2px solid rgba(103, 99, 99, 0.628);
     box-shadow: 0px 5px 50px 5px rgba(87, 86, 86, 0.712);
+}
+
+.requestdetails {
+    display: flex;
+}
+
+.UserDetails {
+    width: 50%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+.UserDetails h2 {
+    margin-bottom: 10px;
+}
+
+.UserDetails form {
+    margin-bottom: 10px;
+}
+
+.UserDetails label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.UserDetails input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.UserDetails button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.UserDetails button:hover {
+    background-color: #45a049;
+}
+
+.UserDetails .getName,
+.UserDetails .getMobile,
+.UserDetails .getEmail {
+    margin-bottom: 15px;
+}
+
+
+.details {
+    width: 50%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+.details p {
+    margin-bottom: 20px;
+}
+
+.details span {
+    font-weight: bold;
+}
+
+.name {
+    margin-bottom: 10px;
+}
+
+.age {
+    margin-bottom: 10px;
+}
+
+.bloodGroup {
+    margin-bottom: 10px;
+}
+
+.weight {
+    margin-bottom: 10px;
+}
+
+.gender {
+    margin-bottom: 10px;
+}
+
+.email {
+    margin-bottom: 10px;
+}
+
+.phoneNumber {
+    margin-bottom: 10px;
+}
+
+.city {
+    margin-bottom: 10px;
 }
