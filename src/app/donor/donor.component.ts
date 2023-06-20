@@ -31,7 +31,7 @@ export class DonorComponent implements OnInit {
     } else if (this.registerformService.loggedInUser !== null) {
       this.loggedInUser = this.registerformService.loggedInUser;
     } else {
-      alert('You are Loggedout or your account was deleted.');
+      alert('You are Loggedout');
       this.router.navigate(['/login']);
     }
     console.log(this.loggedInUser.id);

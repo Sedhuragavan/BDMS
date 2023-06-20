@@ -48,40 +48,75 @@ button:hover {
 } */
 
 .empty {
-    width: 80%;
-    /* height: 50vh; */
+    text-align: center;
+    height: 50vh;
+    width: 75%;
+    margin: 80px auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 50px 5px rgba(87, 86, 86, 0.712);
+
 }
 
 
-/* .viewheight{
-    min-height: 50vh; 
-} */
+.empty h1 {
+    font-size: 2.5rem;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.empty p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-align: justify center;
+    padding: 15px;
+
+}
+
+.viewheight {
+    height: 100%;
+}
+
 .customTable {
-    width: 100%;
-    background-color: #FFFFFF;
+    width: 80%;
+    margin: 10px auto;
     border-collapse: collapse;
-    border-width: 2px;
-    border-color: #7ea8f8;
-    border-style: solid;
-    color: #000000;
+    font-family: Arial, sans-serif;
+
+    color: #333;
+}
+
+.customTable th,
+.customTable td {
+    padding: 12px;
+    border: 1px solid #ccc;
     text-align: center;
 }
 
-table.customTable td,
-table.customTable th {
-    border-width: 2px;
-    border-color: #7ea8f8;
-    border-style: solid;
-    padding: 5px;
+.customTable th {
+    background-color: #f2f2f2;
+    text-align: left;
 }
 
-.table.customTable tr {
-    max-height: 30px;
+
+button {
+    padding: 8px 16px;
+    background-color: #ea0808;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-table.customTable thead {
-    background-color: #e3873b;
+button:hover {
+    background-color: #7a2828;
 }
+
+button:active {
+    background-color: #ff370f;
+}
+
+
 
 .errmsg {
     margin-top: 10px;
@@ -121,7 +156,9 @@ table.customTable thead {
     margin-bottom: 5px;
 }
 
-.UserDetails input[type="text"] {
+.UserDetails input[type="text"],
+.UserDetails input[type="email"],
+input {
     width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
@@ -144,12 +181,15 @@ table.customTable thead {
     background-color: #45a049;
 }
 
-.UserDetails .getName,
-.UserDetails .getMobile,
-.UserDetails .getEmail {
+.UserDetails .get{
     margin-bottom: 15px;
 }
 
+
+.gap{
+    position:relative;
+    z-index: 1;
+}
 
 .details {
     width: 50%;
@@ -168,34 +208,95 @@ table.customTable thead {
     font-weight: bold;
 }
 
-.name {
+.containbody {
     margin-bottom: 10px;
 }
 
-.age {
-    margin-bottom: 10px;
-}
 
-.bloodGroup {
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .dialog-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .get {
     margin-bottom: 10px;
-}
-
-.weight {
-    margin-bottom: 10px;
-}
-
-.gender {
-    margin-bottom: 10px;
-}
-
-.email {
-    margin-bottom: 10px;
-}
-
-.phoneNumber {
-    margin-bottom: 10px;
-}
-
-.city {
-    margin-bottom: 10px;
-}
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #cd4848;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .cancel-button {
+    margin-right: 10px;
+  }
+  
+  .send-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: #45a049;
+  }
+  

@@ -334,39 +334,11 @@
 </div>
 <div class="empty" *ngIf="empty">
   <h1>Search donors</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias mollitia officia qui voluptas soluta nobis
-    reprehenderit reiciendis velit, atque aspernatur eum sequi, debitis repellat tenetur quod. Magni debitis itaque,
-    dolorem est quis molestias minus nobis. Hic soluta cumque animi nam adipisci temporibus pariatur eos iure earum aut
-    facere numquam consequuntur dolor reprehenderit nobis ducimus nulla similique, laborum magnam aspernatur et
-    praesentium ipsum eligendi dolorem. Vero corporis quasi odio, placeat distinctio architecto officia ab suscipit non
-    voluptate omnis? Perspiciatis voluptatem eligendi, vitae aliquam repellendus ex quisquam voluptas! Voluptas iste
-    veniam eos ratione maxime blanditiis illo laboriosam architecto alias, quaerat quos consequatur debitis facere,
-    consectetur nesciunt cumque obcaecati officiis soluta quam doloremque quibusdam molestias. Voluptatum, tempore, sint
-    recusandae ab voluptatibus aut modi, veniam voluptate quia odit ducimus architecto nostrum. Officiis aperiam quidem
-    vero error, repudiandae recusandae, laboriosam soluta dolorum reprehenderit quaerat harum ab? Nemo, aliquid itaque
-    id quidem assumenda eveniet vel sequi minus quasi deleniti velit sit harum corporis deserunt enim. Tempore, dolores
-    asperiores. Nihil iusto necessitatibus assumenda laudantium dolorum perferendis consequatur velit dicta culpa,
-    beatae quos odit quo asperiores rerum dignissimos natus ad aliquam fugiat adipisci voluptatibus. Doloremque ea odio,
-    mollitia unde aspernatur quam quo maiores minus cupiditate dolores voluptate similique ad dicta neque consectetur
-    vero fugiat odit. Autem quas voluptatem laudantium unde molestiae mollitia. Hic commodi accusamus ad, voluptatibus
-    repellendus cum at totam ut quaerat pariatur, voluptate fuga amet iusto quod maxime voluptatem iure aliquid ea
-    doloribus? Laborum quas eius repudiandae ipsam, at magni omnis. Repellat voluptatum explicabo repellendus?
-    Veritatis, velit ea similique veniam, corporis sed qui sequi tenetur est libero, hic perspiciatis! Ab sapiente optio
-    aliquam odio sint, ipsum ex delectus quos qui, nostrum maiores, expedita odit incidunt! Nulla maiores maxime
-    quibusdam ipsa neque exercitationem, dicta sed veritatis eveniet hic repellat nobis perferendis dolore
-    necessitatibus quae doloribus quos, consequatur commodi dolores, esse odit optio. Minus veritatis sapiente neque
-    cumque in est eos quidem, at a ut tempore iste, vitae maxime recusandae blanditiis sit rerum mollitia molestiae quos
-    ducimus quo ea nostrum iure! Et, aut tempore ratione cumque eveniet minus debitis animi itaque magnam est adipisci
-    atque inventore eaque. Doloribus id quia quasi magnam atque pariatur corporis error quis veniam fugiat modi
-    explicabo vero ut, repudiandae ex ipsum tempora, hic possimus ducimus quisquam aspernatur! Dolore at facilis
-    repellendus dolores, odit, maxime assumenda corrupti numquam aspernatur placeat nostrum enim reprehenderit sequi?
-    Dolorem eum autem unde esse, fuga veritatis illo laboriosam fugit, error hic animi exercitationem maiores earum
-    blanditiis quibusdam quae reiciendis amet eos. Laborum, ullam quisquam iure, et quis exercitationem ab voluptatibus
-    distinctio est sunt corrupti ea! Atque molestias voluptatum, aspernatur deserunt tempore velit aut quasi debitis
-    vitae placeat a in nisi doloribus delectus aperiam sapiente quos sint alias quaerat, dolorem assumenda cumque. Autem
-    tempora sunt placeat mollitia dolore? Architecto, ab? Aliquid dignissimos cum dicta, fugiat tempore obcaecati.
-    Architecto molestias laboriosam, nemo dolorum sit in, vero nostrum obcaecati dolor, dicta vitae aut eius fugiat nisi
-    nam illo magnam! Praesentium iste sunt maiores commodi nesciunt quae culpa! Eaque rerum enim quia? Earum!</p>
+  <p>
+    If you require blood for a medical emergency or any other reason, you can use this page to request blood donors who
+    match your requirements. Please provide your desired blood group and city in the respective fields, and click on the
+    "Search" button.
+  </p>
 </div>
 <div *ngIf="showtable" class="viewheight">
   <table class="customTable">
@@ -376,7 +348,6 @@
         <th>City</th>
         <th>Blood Group</th>
         <th>Status</th>
-        <th>Report</th>
         <th>details</th>
       </tr>
     </thead>
@@ -386,7 +357,6 @@
         <td>{{ item.city }}</td>
         <td>{{ item.bgroup }}</td>
         <td>{{item.setStatus}}</td>
-        <td>Report</td>
         <td><button (click)="showphno(item)">shownumber </button></td>
       </tr>
     </tbody>
@@ -402,57 +372,89 @@
     <h2>Enter Your Details</h2><br>
     <form [formGroup]="userForm">
       <div class="getName">
-        <label for="">Your Name:</label>
-        <input type="text" formControlName="userName" />
+        <label for="">Your Name:</label> 
+        <input type="text" formControlName="userName" pattern="^[A-Za-z ]+$" minlength="3"  />
+        <div class="error gap" *ngIf="userForm.controls['userName'].dirty">
+          <p *ngIf="userForm.controls['userName'].errors?.['required']">Please enter your name</p>
+          <p *ngIf="userForm.controls['userName'].errors?.['pattern']"><br>Please enter only Alphabets</p>
+          <p *ngIf="userForm.controls['userName'].errors?.['minlength']">Atleast 3 characters should be there</p>
+        </div>
       </div><br>
       <div class="'getMobile'">
         <label for="">Your Mobile Number:</label>
-        <input type="text" formControlName="mobileNumber" />
+        <input type="tel" formControlName="mobileNumber"  pattern="^[6-9](?!.*(\d)\1{4})\d{9}$"
+        minlength="10" maxlength="10"/>
+        <div class="error" *ngIf="userForm.controls['mobileNumber'].dirty">
+          <p *ngIf="userForm.controls['mobileNumber'].errors?.['required']">Please enter your Phonenumber</p>
+          <p *ngIf="userForm.controls['mobileNumber'].errors?.['pattern']">Plese enter the valid Phonenumber</p>
+        </div>
       </div><br>
-      <div class="getEmail ">
+      <div class="getEmail">
         <label for="">Your Email Id:</label>
-        <input type="text" formControlName="emailId" />
+        <input type="email" formControlName="emailId"   pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$" />
+        <div class="error" *ngIf="userForm.controls['emailId'].dirty">
+          <p *ngIf="userForm.controls['emailId'].errors?.['required']">Please enter your Email Id</p>
+          <p *ngIf="userForm.controls['emailId'].errors?.['pattern']">Plese enter the valid mail id</p>
+        </div>
       </div><br>
       <button (click)="getDonar()">Get Details</button>
     </form>
   </div>
 
   <div *ngIf="details" class="details">
-    <p class="name">
+    <p class="containbody">
       <span>Name:</span> {{selectedname.uname}}
     </p>
-    <p class="age">
+    <p class="containbody">
       <span>Age:</span> {{selectedname.age}}
     </p>
-    <p class="bloodGroup">
+    <p class="containbody">
       <span>Blood Group:</span> {{selectedname.bgroup}}
     </p>
-    <p class="weight">
+    <p class="containbody">
       <span>Weight:</span> {{selectedname.weight}}
     </p>
-    <p class="gender">
+    <p class="containbody">
       <span>Gender:</span> {{selectedname.gender}}
     </p>
-    <p class="email">
+    <p class="containbody">
       <span>Email:</span> {{selectedname.email}}
     </p>
-    <p class="phoneNumber">
+    <p class="containbody">
       <span>Phone Number:</span> {{selectedname.phno}}
     </p>
-    <p class="city">
+    <p class="containbody">
       <span>City:</span> {{selectedname.city}}
     </p>
+
+    <button (click)="openReportDialog()">Report</button>
   </div>
-  
+
 </div>
 
-<app-Footer></app-Footer>
+<div class="dialog-overlay" *ngIf="showDialog">
+  <div class="dialog-content">
+    <form>
+      <div class="get">
+        <label for="name">Name:</label>
+        <input type="text" [placeholder]="selectedname.uname" disabled>
+      </div>
+      <div class="get">
+        <label for="phno">Mobile No:</label>
+        <input type="tel" [placeholder]="selectedname.phno" disabled>
+      </div>
+      <div class="get">
+        <label for="report">Report message:</label>
+        <textarea id="w3review" name="w3review" rows="4" cols="50"
+          placeholder="Write your report message here..."></textarea>
+      </div>
+      <div class="buttons">
+        <button class="cancel-button" (click)="closeDialog()">Cancel</button>
+        <button class="send-button" (click)="reportSuccess()">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
 
-<!-- "uname": "Sedhuragavan L",
-      "age": 22,
-      "bgroup": "AB-",
-      "weight": 80,
-      "gender": "male",
-      "email": "sedhu@gmail.com",
-      "phno": "9454747455",
-      "city": "Anthiyur", -->
+
+<app-Footer></app-Footer>

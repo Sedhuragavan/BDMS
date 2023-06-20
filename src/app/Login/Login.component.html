@@ -26,13 +26,17 @@
           <p *ngIf="loginForm.controls['pass'].errors?.['pattern']">Enter Valid Password</p>
         </div>
       </div>
+      <div class="showpass">
+        <input type="checkbox" id="showPassword" (change)="togglePasswordVisibility()">
+        <label for="showPassword">Show Password</label>
+      </div>
       <div class="pass">
         <p><a routerLink="/forgot"> Forgot Password?</a></p>
       </div>
       <button type="submit" value="Login:">Login</button>
 
       <div class="signup_link">
-        Do not have an account? <a routerLink="/register">Register</a>
+        New Donor <a routerLink="/register">Register Here...</a>
       </div>
     </form>
 

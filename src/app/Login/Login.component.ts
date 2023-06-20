@@ -28,6 +28,15 @@ export class LoginComponent implements OnInit {
     pass: [, [Validators.required]],
   });
 
+
+  togglePasswordVisibility() {
+    const passwordInput = document.getElementById('password');
+    if (passwordInput) {
+      const inputType = passwordInput.getAttribute('type');
+      passwordInput.setAttribute('type', inputType === 'password' ? 'text' : 'password');
+    }
+  }
+
   submitForm() {
     this.registerformService.loginUser().subscribe((users) => {
         const user = users.find((u: any) => u.email === this.loginForm.value.email && u.pass === this.loginForm.value.pass

@@ -58,17 +58,20 @@
         <div class="user-input-box">
           <label for="weight">Weight</label>
           <input type="number" id="weight" name="weight" placeholder="Enter your Weight" formControlName="weight"
-            min="50" />
+            min="50" max="120"/>
           <div class="error" *ngIf="registerForm.controls['weight'].dirty">
             <p *ngIf="registerForm.controls['weight'].errors?.['required']">Please enter your weight</p>
-            <p *ngIf="registerForm.controls['weight'].errors?.['min']">Your age must be atleast 50 KG</p>
+            <p *ngIf="registerForm.controls['weight'].errors?.['min']">Your age must be at least 50 KG</p>
+            <p *ngIf="registerForm.controls['weight'].errors?.['max']">Your age must be less than 150 KG</p>
           </div>
         </div>
 
         <div class="user-input-box">
           <label for="phoneNumber">Phone Number</label>
           <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number" formControlName="phno"
-            pattern="^[6-9]{1}[0-9]{9}$" minlength="10" maxlength="10" />
+            pattern="^[6-9](?!.*(\d)\1{4})\d{9}$"
+            minlength="10" maxlength="10" />
+            <!-- "^[6-9]{1}[0-9]{9}$" -->
 
           <div class="error" *ngIf="registerForm.controls['phno'].dirty">
             <p *ngIf="registerForm.controls['phno'].errors?.['required']">Please enter your Phonenumber</p>
@@ -399,7 +402,7 @@
           <input type="email" id="email"
             pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
             name="email" placeholder="Enter Email" formControlName="email" />
-
+            <!-- ^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$ -->
           <div class="error" *ngIf="registerForm.controls['email'].dirty">
             <p *ngIf="registerForm.controls['email'].errors?.['required']">Please enter your Email Id</p>
             <p *ngIf="registerForm.controls['email'].errors?.['pattern']">Plese enter the valid mail id</p>

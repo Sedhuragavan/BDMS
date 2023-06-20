@@ -1,12 +1,24 @@
 <app-Header></app-Header>
+<!-- <dialog open>Hiii</dialog> -->
+<dialog class="offer-dialog" *ngIf="showOfferDialog">
+  <h2>Blood Donation Quotes</h2>
+  <p>"Blood donation is the gift of life." </p>
+  <p>"Be a blood donor, be a hero in someone's life." </p>
+  <p>"A single pint can save three lives, a single gesture can create a million smiles." </p>
+  <p>"The best blood will at some time get into a fool or a mosquito."  <br> - Benjamin Franklin</p>
+  <p>"Donate blood and be the reason someone smiles today." </p>
+  <p>"Share life, give blood." </p>
+  <button  (click)="closeOfferDialog()">Close</button>
+</dialog>
+
 <div class="main">
   <div class="maincontent">
     <div class="contents">
       <h2>Be the reason for <br> someone's heartbeat</h2>
       <p>We provide a safe, easy and socially-acceptable way to donate <br> blood. Donating blood is a great
         way to help save lives. </p>
-      <div class="request"><a routerLink="/request">Request blood <i class="fas fa-arrow-right-long"></i></a>
-      </div>
+      <!-- <div class="request"><a routerLink="/request">Request blood <i class="fas fa-arrow-right-long"></i></a>
+      </div> -->
     </div>
     <div class="image">
       <img src="../../assets/Images/image12.png" alt="blood donate">
@@ -27,17 +39,17 @@
   <div class="container">
     <div class="data">
       <img src="../../assets/Images/donor.png" alt="">
-      <h4>2000+</h4>
+      <h4>200+</h4>
       <p>Donors Registered</p>
     </div>
     <div class="data">
       <img src="../../assets/Images/bloodunit.png" alt="">
-      <h4>3600+</h4>
+      <h4>150+</h4>
       <p>Blood units collected</p>
     </div>
     <div class="data">
       <img src="../../assets/Images/visitors.png" alt="">
-      <h4>82400+</h4>
+      <h4>1000+</h4>
       <p>Visitors of our website</p>
     </div>
   </div>
@@ -174,7 +186,7 @@
         <p>Every 12 weeks and it takes 15 minutes <br> to donate.</p>
       </div>
     </div>
-    <div class="donorarrow"><a href="./html/register.html">Register as a Donor <i
+    <div class="donorarrow"><a routerLink="/register">Register as a Donor <i
           class="fas fa-arrow-right-long"></i></a>
     </div>
   </div>

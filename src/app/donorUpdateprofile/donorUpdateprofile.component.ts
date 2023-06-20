@@ -30,7 +30,6 @@ export class DonorUpdateprofileComponent implements OnInit {
       alert('You are Loggedout. Login to countinue');
       this.router.navigate(['/login']);
     }
-
     this.updateForm = this.fb.group({
       uname:[,[Validators.required,Validators.pattern,Validators.minLength(3)]],
       age:[,[Validators.required,Validators.min(18),Validators.max(65)]],

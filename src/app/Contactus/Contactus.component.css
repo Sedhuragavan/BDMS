@@ -3,7 +3,7 @@
 }
 
 
-.contactus{
+.contactus {
   background-image: url('../../assets/Images/donate.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -14,13 +14,14 @@
 .contactus:after {
   position: absolute;
   content: "";
-  top:70px;
+  top: 70px;
   left: 0;
   width: 100%;
-  height: 86%;
+  height: 88%;
   z-index: 0;
   background-color: rgba(228, 220, 221, 0.7);
-} 
+}
+
 .c_main {
   z-index: 5;
   position: relative;
@@ -194,4 +195,3 @@
   font-size: 18px;
   line-height: 1.5;
 }
-

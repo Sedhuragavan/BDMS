@@ -28,6 +28,7 @@
 
 
 <div class="center">
+  <p class="current">Current Status:<span>{{status.setStatus}}</span></p>
   <label for="availability">Availability:</label>
   <select id="availability" [(ngModel)]="selectedAvailability" (change)="updateAvailability()">
     <option value="" selected disabled>Select your Availability</option>

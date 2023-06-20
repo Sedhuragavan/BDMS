@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild  } from '@angular/core';
 import { FetchDataService } from '../fetchData.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+
+
 
 @Component({
   selector: 'app-requestblood',
@@ -19,6 +21,8 @@ export class RequestbloodComponent implements OnInit {
   details: boolean = false;
   empty:boolean= true;
   showtable:boolean=false;
+  showDialog:boolean=false;
+  
 
   constructor(private fetchdata: FetchDataService, private fb:FormBuilder, private http:HttpClient ) {}
 
@@ -59,15 +63,27 @@ export class RequestbloodComponent implements OnInit {
     if (this.userForm.invalid) {
       alert('Enter yout Details');
     } else if (this.userForm.valid) {
-      this.http
-        .post<any>('http://localhost:3000/RequesterDonar', this.userForm.value)
-        .subscribe(() => {
-          alert('Updated to DB');
+      this.http.post<any>('http://localhost:3000/RequesterDonar', this.userForm.value).subscribe(() => {
+        
         });
       this.details =!this.details;
     }
   }
   donorDetails(item: any) {
     this.selectedname = item;
+  }
+
+
+  openReportDialog() {
+    this.showDialog=true;
+  }
+
+  closeDialog(){
+    this.showDialog=false;
+  }
+
+  reportSuccess(){
+    alert("Reporterd Sucessfully!");
+    this.showDialog=false;
   }
 }
